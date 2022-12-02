@@ -15,7 +15,7 @@ bool Command1(int Algorithm, char* GivenInput, int OutputParameter)
         for (int i = 0; i < InputSize; i++)
             IFile >> arr[i];
 
-        outputAlgorithmMode(Algorithm, arr, GivenInput, InputSize, -1, OutputParameter);
+        outputAlgorithmMode(Algorithm, arr, GivenInput, InputSize, -1, OutputParameter, 1);
         
         mkdir("Files");
         string OFile = "Files/output.txt";
@@ -34,7 +34,7 @@ void Command2(int Algorithm, int InputSize, int InputOrder, int OutputParameter)
     string IFile = "Files/input.txt";
     outputFile(IFile, arr, InputSize);
 
-    outputAlgorithmMode(Algorithm, arr, nullptr, InputSize, InputOrder, OutputParameter);
+    outputAlgorithmMode(Algorithm, arr, nullptr, InputSize, InputOrder, OutputParameter, 2);
     
     string OFile = "Files/output.txt";
     outputFile(OFile, arr, InputSize);
@@ -52,7 +52,7 @@ void Command3(int Algorithm, int InputSize, int OutputParameter)
         GenerateData(arr, InputSize, i);
         string IFile = "Files/input_" + to_string(i + 1) + ".txt";
         outputFile(IFile, arr, InputSize);
-        outputAlgorithmMode(Algorithm, arr, nullptr, InputSize, -1, OutputParameter);
+        outputAlgorithmMode(Algorithm, arr, nullptr, InputSize, i, OutputParameter, 3);
     }
     delete []arr;
 }

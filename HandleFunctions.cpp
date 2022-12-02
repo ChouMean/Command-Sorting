@@ -52,33 +52,23 @@ void outputFile(string FileName, int arr[], int number)
         cerr << "Can not write array into file " << FileName << "." << endl;
 }
 
-void outputAlgorithmMode(int Algorithm, int arr[], char* GivenInput, int InputSize, int InputOrder, int OutputParameter)
+void outputAlgorithmMode(int Algorithm, int arr[], char* GivenInput, int InputSize, int InputOrder, int OutputParameter, int Command)
 {
-    if (InputOrder >= 0)
+    if (Command != 3)
     {
         cout << "ALGORITHM MODE" << endl;
         cout << "Algorithm: " << SortingAlgorithm[Algorithm] << endl;
         if (GivenInput)
             cout << "Input file: " << GivenInput << endl;
         cout << "Input size: " << InputSize << endl;
-        cout << "Input order: " << InputOrders[InputOrder] << endl;
-        for (int i = 0; i < 20; i++)
-            cout << '-';
-        cout << endl;
-        outputPara(arr, InputSize, Algorithm, OutputParameter);
     }
     else
-    {
-        for (int i = 0; i < NumOfInOrder; i++)
-        {
-            cout << endl;
-            cout << "Input order: " << InputOrders[i] << endl;
-            for (int i = 0; i < 20; i++)
-                cout << '-';
-            cout << endl;
-            outputPara(arr, InputSize, Algorithm, OutputParameter);
-        }
-    }
+        cout << endl;
+    cout << "Input order: " << InputOrders[InputOrder] << endl;
+    for (int i = 0; i < 20; i++)
+        cout << '-';
+    cout << endl;
+    outputPara(arr, InputSize, Algorithm, OutputParameter);
 }
 
 void outputCompareMode(int Algorithm1, int Algorithm2, int arr[], char* GivenInput, int InputSize, int InputOrder)
