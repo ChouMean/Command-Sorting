@@ -21,4 +21,4 @@ const string InputOrders[NumOfInOrder] = {"Randomize", "Nearly Sorted", "Sorted"
 const string OutputParameterList[NumOfOutPara] = {"time", "comp", "both"};
 
 void timingAlgorithm(int arr[], int InputSize, int Algorithm);
-int countingCompAlgorithm(int arr[], int InputSize, int Algorithm);
+unsigned long long countingCompAlgorithm(int arr[], int InputSize, int Algorithm);

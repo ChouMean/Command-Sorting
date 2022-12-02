@@ -54,13 +54,13 @@ void outputFile(string FileName, int arr[], int number)
 
 void outputAlgorithmMode(int Algorithm, int arr[], char* GivenInput, int InputSize, int InputOrder, int OutputParameter)
 {
-    cout << "ALGORITHM MODE" << endl;
-    cout << "Algorithm: " << SortingAlgorithm[Algorithm] << endl;
-    if (GivenInput)
-        cout << "Input file: " << GivenInput << endl;
-    cout << "Input size: " << InputSize << endl;
     if (InputOrder >= 0)
     {
+        cout << "ALGORITHM MODE" << endl;
+        cout << "Algorithm: " << SortingAlgorithm[Algorithm] << endl;
+        if (GivenInput)
+            cout << "Input file: " << GivenInput << endl;
+        cout << "Input size: " << InputSize << endl;
         cout << "Input order: " << InputOrders[InputOrder] << endl;
         for (int i = 0; i < 20; i++)
             cout << '-';

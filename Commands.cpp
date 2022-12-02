@@ -44,13 +44,16 @@ void Command2(int Algorithm, int InputSize, int InputOrder, int OutputParameter)
 void Command3(int Algorithm, int InputSize, int OutputParameter)
 {
     mkdir("Files");
+    cout << "ALGORITHM MODE" << endl;
+    cout << "Algorithm: " << SortingAlgorithm[Algorithm] << endl;
+    cout << "Input size: " << InputSize << endl;
     for (int i = 0; i < 4; i++)
     {
         GenerateData(arr, InputSize, i);
         string IFile = "Files/input_" + to_string(i + 1) + ".txt";
         outputFile(IFile, arr, InputSize);
+        outputAlgorithmMode(Algorithm, arr, nullptr, InputSize, -1, OutputParameter);
     }
-    outputAlgorithmMode(Algorithm, arr, nullptr, InputSize, -1, OutputParameter);
     delete []arr;
 }
 

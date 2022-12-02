@@ -2,7 +2,7 @@
 #include <cmath>
 #include "Headers\Algorithms.h"
 
-int countCompare = 0;
+unsigned long long countCompare = 0;
 
 void T_SelectionSort(int arr[], int InputSize)
 {
@@ -574,8 +574,9 @@ void timingAlgorithm(int arr[], int InputSize, int Algorithm)
     else
         cout << time / 10000 << " milliseconds";
 }
-int countingCompAlgorithm(int arr[], int InputSize, int Algorithm)
+unsigned long long countingCompAlgorithm(int arr[], int InputSize, int Algorithm)
 {
+    countCompare = 0;
     switch (Algorithm)
     {
         case 0: C_SelectionSort(arr, InputSize); break;
